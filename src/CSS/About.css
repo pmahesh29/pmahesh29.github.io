@@ -1,7 +1,7 @@
 .about-content {
   display: flex;
   align-items: flex-start;
-  flex-direction: column; /* Ensure header is above content */
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -13,6 +13,7 @@
 .about-text {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 40px;
 }
 
 .about-photo {
@@ -41,11 +42,64 @@
   text-align: center;
 }
 
-
 .subtitle {
   font-size: 18px;
   margin-top: 0;
   margin-bottom: 5px;
   color: #666;
-  text-align: left;    /* optional - aligns better with layout */
+  text-align: left;
+}
+
+/* Work Experience Section */
+.work-experience {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 2px solid #e0e0e0;
+}
+
+.work-experience h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #333;
+  text-decoration: underline;
+}
+
+.experience-item {
+  margin-bottom: 45px;
+}
+
+.experience-header {
+  margin-bottom: 12px;
+}
+
+.experience-header .company {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.experience-header h4 {
+  font-size: 17px;
+  margin: 4px 0;
+  color: #444;
+  font-weight: 600;
+}
+
+.experience-header .date {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+  margin-top: 4px;
+}
+
+.experience-item ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.experience-item li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+  font-size: 15px;
 }

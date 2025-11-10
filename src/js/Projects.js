@@ -1,19 +1,21 @@
 import React from 'react';
 import '../CSS/Projects.css'; 
 import photon from '../Assets/Photon.jpg';
+import fitagotchi from '../Assets/Fitagotchi.jpg';
 
 const projects = [
   {
     title: 'Photon Laser Tag System',
-    description: 'Created a Photon Laser Tag System for a Software Engineering Team Project at the University of Arkansas.',
+    description: '',
     image: photon,
     link: 'https://github.com/team-15-csce3513/photon'
   },
-  // {
-  //   title: '2) Project Photon',
-  //   description: 'Created a Photon Laser Tag System for a Software Engineering course at the University of Arkansas.',
-  //   link: 'https://github.com/team-15-csce3513/photon'
-  // }
+  {
+    title: 'Fitagotchi',
+    description: '',
+    image: fitagotchi,
+    link: 'https://github.com/They-See-Cats/Fitagotchi'
+  }
 ];
 
 const Projects = () => (

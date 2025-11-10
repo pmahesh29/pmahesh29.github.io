@@ -4,7 +4,6 @@ import Home from './Home';
 import Classes from './Classes';
 import Projects from './Projects';
 import Contact from './Contact';
-import Resume from './Resume';
 import '../CSS/App.css';
 // Import icons
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -18,7 +17,15 @@ const App = () => (
             <li><NavLink to="/" end className={({ isActive }) => (isActive ? "active-link" : "")}>Home</NavLink></li>
             <li><NavLink to="/projects" className={({ isActive }) => (isActive ? "active-link" : "")}>Projects</NavLink></li>
             <li><NavLink to="/classes" className={({ isActive }) => (isActive ? "active-link" : "")}>Courses</NavLink></li>
-            <li><NavLink to="/resume" className={({ isActive }) => (isActive ? "active-link" : "")}>Resume</NavLink></li>
+            <li>
+              <a 
+                href="\Pranav_Mahesh_Resume.pdf" 
+                download="Pranav_Mahesh_Resume.pdf"
+                className="resume-download-link"
+              >
+                Resume
+              </a>
+            </li>
             <li><NavLink to="/contact" className={({ isActive }) => (isActive ? "active-link" : "")}>Contact</NavLink></li>
             <li className="social-icons">
               <a href="https://github.com/pmahesh29" target="_blank" rel="noopener noreferrer">
@@ -38,7 +45,6 @@ const App = () => (
         <Route path="/classes" element={<Classes />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/resume" element={<Resume />} />
       </Routes>
     </main>
     <footer>
