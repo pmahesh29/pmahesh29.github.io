@@ -49,7 +49,7 @@ const App = () => (
     </main>
     <footer>
       <div className="container">
-        <p>&copy; Professional Portfolio</p>
+        <p> Pranav Mahesh's Portfolio</p>
       </div>
     </footer>
   </Router>

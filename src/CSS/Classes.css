@@ -1,48 +1,193 @@
-.classes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: left;
-    margin-top: 20px;
+/* Main Container - Centered like Home page */
+.Classes {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
-.h2{
-    color: #0c0b0b;
-    text-align: left;
+.resume-container {
+  width: 100%;
 }
+
+/* Section Titles */
+.section-title {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  border-bottom: 3px solid #a15c5c;
+  padding-bottom: 10px;
+}
+
+.section-title.classes {
+  /* Override flexbox for main section titles */
+  display: block;
+  text-align: left;
+  padding: 0;
+  font-size: 25px;
+}
+
+/* Certifications Section */
+.certifications-section {
+  margin-bottom: 50px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.cert-card {
+  background: #f9f9f9;
+  border-left: 4px solid #a15c5c;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cert-title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.cert-provider {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.cert-date {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.cert-skills {
+  font-size: 14px;
+  color: #555;
+}
+
+/* In Progress Section */
+.in-progress-section {
+  margin-bottom: 50px;
+}
+
+.in-progress-card {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+/* Coursework Section */
+.coursework-section {
+  margin-top: 40px;
+}
+
+.classes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin-top: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.dropdown-button {
+  background-color: #a15c5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-button:hover {
+  background-color: #8a4545;
+}
+
+.h2 {
+  color: #0c0b0b;
+  text-align: left;
+}
+
 .hover-container {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
+}
+
+.hover-text {
+  visibility: hidden;
+  width: 500px;
+  background-color: #f9f9f9;
+  color: #000;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 100%;
+  margin-left: 10px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hover-container:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.custom-link {
+  color: black;
+  font-size: large;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  text-decoration: underline;
+  color: #a15c5c;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
   }
   
   .hover-text {
-    visibility: hidden;
-    width: 700px;
-    background-color: #f9f9f9;
-    color: #000;
-    text-align: left;
-    border-radius: 6px;
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 100%;
-    margin-left: 10px;
-    transform: translateY(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
+    width: 300px;
+    font-size: 14px;
   }
   
-  .hover-container:hover .hover-text {
-    visibility: visible;
-    opacity: 1;
+  .section-title {
+    font-size: 26px;
+    padding: 20px 15px;
   }
   
-  .custom-link {
-    color: black;
-    font-size: large;
-    text-decoration: none;
+  .Classes {
+    padding: 20px 15px;
   }
-  
-  .custom-link:hover {
-    text-decoration: underline;
-  }
+}

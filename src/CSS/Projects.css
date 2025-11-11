@@ -1,56 +1,84 @@
 .Projects {
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .projects {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start; /* Align items to the start (left) */
-  gap: 20px; /* Maintain spacing between project items */
+  flex-direction: column;
+  gap: 60px;
 }
 
 .project {
+  display: flex;
+  align-items: center;
+  gap: 40px;
   background: none;
-  padding: 20px;
+  padding: 0;
   border-radius: 0;
-  width: calc(33.333% - 20px); /* Set width to create 3 columns, accounting for gap */
-  max-width: 300px;
-  text-align: left; /* Align text to the left */
   box-shadow: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s;
 }
 
 .project:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.project-image {
+  width: 500px !important;
+  height: 350px !important;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: #000;
+  flex-shrink: 0;
+}
+
+.project-content {
+  flex: 1;
+  text-align: left;
 }
 
 .project h3 {
   color: #0c0b0b;
   margin-bottom: 15px;
+  font-size: 28px;
 }
 
-.project img {
-  max-width: 100%;
-  height: auto;
+.project-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #a15c5c;
+  color: white;
+  text-decoration: none;
   border-radius: 4px;
-  margin-bottom: 10px;
+  transition: background-color 0.3s;
 }
 
-.project li {
-  list-style: none;
-  text-align: left;
-  padding: 0;
+.project-link:hover {
+  background-color: #8a4545;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .project {
-    width: calc(50% - 20px); /* 2 columns on smaller screens */
+    flex-direction: column;
+    text-align: center;
   }
-}
-
-@media (max-width: 480px) {
-  .project {
-    width: 100%; /* Full width on very small screens */
+  
+  .project-image {
+    width: 100% !important;
+    max-width: 500px;
+    height: 300px !important;
+  }
+  
+  .project-content {
+    text-align: center;
   }
 }

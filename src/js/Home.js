@@ -7,15 +7,14 @@ const About = () => (
     <div className="container">
       <div className="about-content">
         <h2>Pranav Mahesh
-          <p className="subtitle">Cybersecurity Professional | Security Operations & Fraud Prevention</p>
+          <p className="subtitle">Application Support Intern @ Arvest Bank | Aspiring Security Analyst</p>
         </h2>
         <div className="about-text">
           <img src={myPhoto} alt="Pranav Mahesh" className="about-photo" />
           <p>
-            Hey, I'm Pranav Mahesh, a cybersecurity professional passionate about security operations and fraud prevention. 
-            I specialize in SIEM analysis, data security policy, and automation. I'm driven by curiosity about how systems 
-            work and the challenge of protecting them. Former VP of CyberHogs, where I connected students with real-world 
-            security opportunities.
+            Hey! I'm Pranav Mahesh, a cybersecurity professional passionate about protecting systems and preventing fraud. 
+            I specialize in security operations, automation, and data protection. This site showcases my work and experience 
+            in the field, so feel free to explore my projects and reach out if you would like to connect!
           </p>
         </div>
       </div>
@@ -54,7 +53,7 @@ const About = () => (
         <div className="experience-item">
           <div className="experience-header">
             <div className="company">Arvest Bank</div>
-            <h4>Software Dev Intern</h4>
+            <h4>Software Development Intern</h4>
             <div className="date">May 2023 - December 2023</div>
           </div>
           <ul>
