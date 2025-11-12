@@ -22,7 +22,7 @@ const Education = () => {
     {
       title: 'Operating Systems & Virtualization',
       icon: <FaServer />,
-      skills: ['Kali Linux', 'Ubuntu', 'SEED Labs', 'VMware']
+      skills: ['VMware','Kali Linux', 'Ubuntu', 'pfSense', 'Metasploitable','SEED Labs']
     },
     {
       title: 'Cybersecurity Domains',
@@ -178,17 +178,15 @@ const Education = () => {
             ))}
           </div>
         </div>
-
-        {/* In Progress Section */}
-        <div className="in-progress-section">
-          <h2 className="section-title">In Progress</h2>
+        <h3 className="course-category">In Progress</h3>
+          <div className="courses-grid">
           <div className="in-progress-grid">
             <div className="in-progress-card">
               <h4 className="cert-title">CompTIA Security+ (SY0-701)</h4>
               <p className="cert-provider">Expected 2026</p>
             </div>
+            </div>
           </div>
-        </div>
 
         {/* Coursework Section */}
         <div className="coursework-section">
