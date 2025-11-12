@@ -1,7 +1,36 @@
 import React from 'react';
-import '../CSS/Education.css';
+import '../CSS/Skills.css';
+import { 
+  FaCode,
+  FaShieldAlt, 
+  FaServer,
+  FaUserShield
+} from 'react-icons/fa';
 
 const Education = () => {
+  const technicalSkills = [
+    {
+      title: 'Programming & Databases',
+      icon: <FaCode />,
+      skills: ['Python', 'C++', 'PowerShell', 'MySQL']
+    },
+    {
+      title: 'Security & Forensics Tools',
+      icon: <FaShieldAlt />,
+      skills: ['Wireshark', 'Zeek', 'Snort', 'CrowdStrike', 'ServiceNow']
+    },
+    {
+      title: 'Operating Systems & Virtualization',
+      icon: <FaServer />,
+      skills: ['Kali Linux', 'Ubuntu', 'SEED Labs', 'VMware']
+    },
+    {
+      title: 'Cybersecurity Domains',
+      icon: <FaUserShield />,
+      skills: ['Incident Response (NIST)', 'Threat Hunting', 'SIEM', 'IAM', 'Zero Trust']
+    }
+  ];
+
   const certifications = [
     {
       title: 'CompTIA Security+ (SY0-601) Cert Prep: Threats, Attacks, and Vulnerabilities',
@@ -114,6 +143,26 @@ const Education = () => {
   return (
     <section className="education">
       <div className="education-container">
+        
+        {/* Technical Skills Section */}
+        <div className="technical-skills-section">
+          <h2 className="section-title">Technical Skills</h2>
+          <div className="technical-skills-grid">
+            {technicalSkills.map((category, index) => (
+              <div key={index} className="tech-skill-card">
+                <div className="tech-skill-header">
+                  <span className="tech-skill-icon">{category.icon}</span>
+                  <h3 className="tech-skill-title">{category.title}</h3>
+                </div>
+                <div className="tech-skill-items">
+                  {category.skills.map((skill, idx) => (
+                    <span key={idx} className="tech-skill-badge">{skill}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
 
         {/* Certifications Section */}
         <div className="certifications-section">
@@ -133,9 +182,11 @@ const Education = () => {
         {/* In Progress Section */}
         <div className="in-progress-section">
           <h2 className="section-title">In Progress</h2>
-          <div className="in-progress-card">
-            <h4 className="cert-title">CompTIA Security+ (SY0-701)</h4>
-            <p className="cert-provider">Expected 2026</p>
+          <div className="in-progress-grid">
+            <div className="in-progress-card">
+              <h4 className="cert-title">CompTIA Security+ (SY0-701)</h4>
+              <p className="cert-provider">Expected 2026</p>
+            </div>
           </div>
         </div>
 

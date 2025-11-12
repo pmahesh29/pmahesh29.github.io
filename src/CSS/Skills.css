@@ -153,12 +153,24 @@
   margin-bottom: 60px;
 }
 
+.in-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
 .in-progress-card {
   background: rgba(0, 191, 255, 0.1);
   border: 2px dashed rgba(0, 191, 255, 0.4);
   border-radius: 12px;
   padding: 25px;
-  max-width: 400px;
+  transition: all 0.3s ease;
+}
+
+.in-progress-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 191, 255, 0.6);
+  box-shadow: 0 8px 24px rgba(0, 191, 255, 0.15);
 }
 
 .in-progress-card .cert-title {
@@ -244,5 +256,81 @@
 
   .course-category {
     font-size: 20px;
+  }
+}
+
+/* Technical Skills Section */
+.technical-skills-section {
+  margin-bottom: 60px;
+}
+
+.technical-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.tech-skill-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.tech-skill-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 255, 136, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 255, 136, 0.15);
+}
+
+.tech-skill-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-skill-icon {
+  font-size: 24px;
+  color: #00ff88;
+}
+
+.tech-skill-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin: 0;
+}
+
+.tech-skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-skill-badge {
+  background: rgba(0, 191, 255, 0.15);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  color: #00bfff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tech-skill-badge:hover {
+  background: rgba(0, 191, 255, 0.25);
+  border-color: rgba(0, 191, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .technical-skills-grid {
+    grid-template-columns: 1fr;
   }
 }
