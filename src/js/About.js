@@ -25,11 +25,16 @@ const About = () => (
           </p>
           
           <h3 className="section-header">Education</h3>
-          <p>
-            <strong>University of Arkansas</strong> <br/>
-            Bachelor of Science in Computer Science, Cybersecurity Concentration <strong>[May 2025]<strong> </br>
-            GPA: 3.50 · Dean's List: May 2025
-          </p>
+          <div className="education-block">
+            <div className="education-header">
+              <span className="university-name">University of Arkansas, Fayetteville</span>
+            </div>
+            <div className="education-details">
+              <span className="degree-info">Bachelor of Science in Computer Science | Cybersecurity Concentration</span>
+              <span className="education-date"><strong>August 2021 - May 2025</strong></span>
+            </div>
+            <div className="education-gpa">GPA: 3.50 · Dean's List</div>
+          </div>
           
           <h3 className="section-header">My Journey</h3>
           <p>
